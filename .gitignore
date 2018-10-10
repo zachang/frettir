@@ -6,3 +6,5 @@ _pycache_/
 test/*.pyc
 .env
 frettir/
+newsapp/db.sqlite3
+newsapp/news/migrations/

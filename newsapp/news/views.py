@@ -4,5 +4,5 @@ from django.views.generic import TemplateView
 
 
 class HomePageView(TemplateView):
-    '''This renders the home page'''
+    """This renders the home page"""
     template_name = 'news/home.html'

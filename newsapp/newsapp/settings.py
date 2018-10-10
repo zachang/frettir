@@ -125,3 +125,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+USER_AUTH_MODEL = 'news.User'
