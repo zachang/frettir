@@ -3,7 +3,7 @@
 
 {% block extend_base_css %}
     <link rel="stylesheet" href="{% static 'css/auth.css' %}">
-    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %} 
 
 {% block header %}
@@ -16,7 +16,7 @@
             {% csrf_token %}
             <div class="form-fields"></div>
                 {{ form.as_p }}
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Login">
             </div>
         </form>
     </div>

@@ -20,3 +20,12 @@ class RegisterForm(forms.Form):
     password_conf = forms.CharField(label='', max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Confirm Password'})
     )
+
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(label='', max_length=100, required=True,
+        widget=forms.EmailInput(attrs={'placeholder': 'Email'})
+    )
+    password = forms.CharField(label='', max_length=100, required=True,
+        widget=forms.TextInput(attrs={'placeholder': 'Password'})
+    )
