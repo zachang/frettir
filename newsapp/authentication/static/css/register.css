@@ -1,0 +1,139 @@
+@media screen and (max-width: 767) {
+    .form-container {
+        font-family: 'Montserrat', sans-serif;
+        height: auto;
+        width: 90%;
+        margin-left: 5%;
+        color: grey;
+        margin-top: 8%;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 4px 10px;
+        margin: 0 0;
+        display: inline-block;
+        border: 1px solid #3F54AF;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .app-logo {
+        font-weight: 400;
+        font-size: 30px;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 18%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .form-container {
+        font-family: 'Montserrat', sans-serif;
+        height: auto;
+        width: 50%;
+        margin: 0 25%;
+        color: grey;
+        margin-top: 4%;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        font-size: 15px;
+        padding: 4px 10px;
+        margin: 0 0;
+        display: inline-block;
+        border: 1px solid #3F54AF;
+        box-sizing: border-box;
+    }
+
+    .app-logo {
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 40px;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 7%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    body {
+        height: 978px !important; 
+    }
+
+    .form-container {
+        font-family: 'Montserrat', sans-serif;
+        height: auto;
+        padding: 0 15px;
+        width: 45%;
+        margin: 0 27%;
+        color: grey;
+        margin-top: 4%;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 7px 10px;
+        margin: 10px 0;
+        font-size: 20px;
+        display: inline-block;
+        border: 1px solid #3F54AF;
+        box-sizing: border-box;
+    }
+
+    .app-logo {
+        font-weight: 400;
+        font-size: 30px;
+        margin-top: 40px;
+        width: 45%;
+        margin: 0 27%;
+        margin-top: 7%;
+    }
+
+    input[type=submit] {
+        padding: 7px 0;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        height: 820px !important; 
+    }
+
+    .form-container {
+        font-family: 'Montserrat', sans-serif;
+        height: auto;
+        padding: 0 25px;
+        width: 30%;
+        margin: 0 35%;
+        color: grey;
+        margin-top: 2%;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 10px 10px;
+        margin: 2px 0;
+        font-size: 15px;
+        display: inline-block;
+        border: 1px solid #3F54AF;
+        box-sizing: border-box;
+    }
+
+    .app-logo {
+        font-weight: 400;
+        font-size: 50px;
+        margin-top: 40px;
+        width: 30%;
+        margin: 0 35%;
+        margin-top: 2%;
+    }
+
+    input[type=submit] {
+        padding: 7px 0;
+        font-size: 15px;
+    }
+}
