@@ -11,7 +11,7 @@ class RegisterForm(forms.Form):
     display_name = forms.CharField(label='', max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Display Name'})
     )
-    email = forms.EmailField(label='', max_length=100, required=True,
+    email = forms.EmailField(label='', max_length=200, required=True,
         widget=forms.EmailInput(attrs={'placeholder': 'Email'})
     )
     password = forms.CharField(label='', max_length=100, required=True,
@@ -23,9 +23,14 @@ class RegisterForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(label='', max_length=100, required=True,
+    email = forms.EmailField(label='', max_length=200, required=True,
         widget=forms.EmailInput(attrs={'placeholder': 'Email'})
     )
     password = forms.CharField(label='', max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Password'})
+    )
+
+class PasswordResetForm(forms.Form):
+    email = forms.EmailField(label='', max_length=200, required=True,
+        widget=forms.EmailInput(attrs={'placeholder': 'Email'})
     )
