@@ -21,7 +21,7 @@ from news.views import HomePageView
 
 urlpatterns = [
     path('', HomePageView.as_view()),
-    path('news/', include('news.urls')),
-    path('auth/', include('authentication.urls')),
+    path('news/', include('news.urls', namespace='news')),
+    path('auth/', include('authentication.urls', namespace='auth')),
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

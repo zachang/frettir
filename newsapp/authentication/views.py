@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import FormView
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, PasswordResetForm
 
 
 class RegistertView(FormView):
@@ -11,4 +11,9 @@ class RegistertView(FormView):
 class LoginView(FormView):
     template_name = 'login.html'
     form_class = LoginForm
+    success_url = 'news/home.html'
+
+class PasswordResetView(FormView):
+    template_name = 'password_reset.html'
+    form_class = PasswordResetForm
     success_url = 'news/home.html'
