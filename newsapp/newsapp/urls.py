@@ -23,5 +23,6 @@ urlpatterns = [
     path('', HomePageView.as_view()),
     path('news/', include('news.urls', namespace='news')),
     path('auth/', include('authentication.urls', namespace='auth')),
+    path('dashboard/', include('user_dashboard.urls', namespace='dashboard')),
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

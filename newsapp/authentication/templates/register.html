@@ -14,7 +14,7 @@
     <div class="form-container">
         <form action="" method="post" class="reg-form">
             {% csrf_token %}
-            <div class="form-fields"></div>
+            <div class="form-fields">
                 {{ form.as_p }}
                 <input type="submit" value="Sign Up">
             </div>

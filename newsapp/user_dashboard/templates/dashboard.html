@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extend_base_css %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock %} 
+
+{% block header-link %}
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex flex-column align-items-center dashboard-content">
+        <div class="profile-container d-flex flex-column align-items-center">
+            <div class="profile-image-container rounded-circle d-flex">
+                <img src="{% static 'images/profile.jpg' %}" alt="profile image" class="profile-image rounded-circle">
+            </div>
+            <div class="d-flex profile-username">
+                <h6>Dawuda Ebenezer</h6>
+            </div>
+            <div class="d-flex w-100 profile-navs align-items-end mt-auto">
+                <a class="nav-link active" href="#">Edit profile</a>
+                <a class="nav-link" href="#">Change password</a>
+                <a class="nav-link" href="#">My News</a>
+                <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+            </div>
+        </div>
+        
+        <div class="d-flex update-form-container justify-content-center">
+            <form action="" method="post" class="update-form">
+                {% csrf_token %}
+                <div class="form-fields">
+                    {{ form.as_p }}
+                    <input type="submit" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
