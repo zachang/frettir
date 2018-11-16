@@ -12,7 +12,7 @@
 {% block content %}
     <div class="app-logo"><a href="{% url 'news:home' %}">Frettir</a></div>
     <div class="form-container">
-        <form action="{% url 'auth:register' %}" method="POST" class="reg-form">
+        <form action="{% url 'auth:register' %}" method="POST" class="reg-form" data-parsley-validate>
             {% csrf_token %}
             <div class="form-fields">
                 {{ form.as_p }}
@@ -24,3 +24,7 @@
 
 {% block footer %}
 {% endblock %}
+
+{% block extend_js %}
+    <script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}  

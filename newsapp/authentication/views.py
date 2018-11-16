@@ -21,7 +21,8 @@ class RegistertView(FormView):
         user = User(username=username, first_name=first_name, 
         last_name=last_name, email=email)
         user.set_password(password)
-        user.save()
+        # print(">>>>", user)
+        # user.save()
         auth_user = authenticate(username=username, password=password)
         login(self.request, auth_user)
         return redirect('/')

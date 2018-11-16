@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="app-logo"><a href="#!">Frettir</a></div>
+    <div class="app-logo"><a href="{% url 'news:home' %}">Frettir</a></div>
     <div class="form-container">
-        <form action="" method="post" class="reg-form">
+        <form action="{% url 'auth:login' %}"  method="post" class="reg-form" data-parsley-validate>
             {% csrf_token %}
             <div class="form-fields">
                 {{ form.as_p }}
