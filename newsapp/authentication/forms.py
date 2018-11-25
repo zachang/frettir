@@ -17,10 +17,10 @@ class RegisterForm(forms.Form):
         widget=forms.EmailInput(attrs={'placeholder': 'Email'})
     )
     password = forms.CharField(label='', min_length=2, max_length=100, required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Password'})
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password'})
     )
     password_conf = forms.CharField(label='', min_length=2, max_length=100, required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Confirm Password'})
+        widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'})
     )
 
     class Meta:

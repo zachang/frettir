@@ -1,8 +1,11 @@
 from django.shortcuts import render,  redirect
+from django.db.models import Q
 from django.urls import reverse
+from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.views.generic.edit import FormView
+from django.http import HttpResponseRedirect
 from .forms import RegisterForm, LoginForm, PasswordResetForm
 
 
@@ -20,12 +23,15 @@ class RegistertView(FormView):
 
         user = User(username=username, first_name=first_name, 
         last_name=last_name, email=email)
-        user.set_password(password)
-        # print(">>>>", user)
-        # user.save()
-        auth_user = authenticate(username=username, password=password)
-        login(self.request, auth_user)
-        return redirect('/')
+        lookup_user = User.objects.filter(Q(email=email) | Q(username=username))
+        if not lookup_user:
+            user.set_password(password)
+            user.save()
+            auth_user = authenticate(username=username, password=password)
+            login(self.request, auth_user)
+            return redirect('/')
+        messages.error(self.request, 'This email or username already exist')
+        return HttpResponseRedirect(reverse('auth:register'))
 
 class LoginView(FormView):
     template_name = 'login.html'

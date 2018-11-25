@@ -1,5 +1,5 @@
-// $(document).ready(function(){
-//     $("input[type=submit]").click( function(){
-//         $(".form-fields").css({"color":  "red", "fontSize": "10px" });
-//     });
-// });
+$(document).ready(function () {
+    setTimeout(function () {
+        $(".alert--top").alert('close');
+    }, 10000);
+});

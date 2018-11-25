@@ -42,7 +42,7 @@ p {
 
 .app-logo a{
     text-decoration: none;
-    color: #3F54AF;
+    color: #FFF;
 }
 
 .reg-form {
@@ -69,4 +69,27 @@ input[type=submit] {
 
 .form-fields {
     padding: 16px;
+}
+
+ /* alerts */
+
+.alert {
+    border-radius: 0;
+    width: 25%;
+}
+
+.alert-danger {
+    color: #fff;
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.alert--top {
+    position: fixed;
+    top: 5px; 
+    right:2%;
+}
+
+.alert-danger .alert__link {
+    color: #f1c40f;
 }

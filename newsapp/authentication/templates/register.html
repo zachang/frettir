@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block extend_base_css %}
     <link rel="stylesheet" href="{% static 'css/auth.css' %}">
     <link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock %} 
+
 
 {% block header %}
 {% endblock %}
@@ -16,10 +18,30 @@
             {% csrf_token %}
             <div class="form-fields">
                 {{ form.as_p }}
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign Up" class="form-container__reg">
             </div>
         </form>
     </div>
+    {% if messages %}
+        <ul class="alert alert-danger 
+            alert--top d-flex
+            justify-content-center 
+            alert-dismissible
+            fade show" 
+            role="alert"
+        >
+            {% for message in messages %}
+                <li>{{ message }}. If this is your account 
+                    <a href="{% url 'auth:login' %}" class="alert__link">
+                    Login
+                    </a>
+                </li>
+            {% endfor %}
+            <button type="button" class="close justify-content-center" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </ul>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}
