@@ -20,7 +20,32 @@
             </div>
         </form>
     </div>
+    {% if messages %}
+        <ul class="alert alert-danger 
+            alert--top d-flex
+            justify-content-center 
+            alert-dismissible
+            fade show" 
+            role="alert"
+        >
+            {% for message in messages %}
+                <li>
+                    {{ message }}. If you don't have an account, you can
+                    <a href="{% url 'auth:register' %}" class="alert__link">
+                    Register.
+                    </a>
+                </li>
+            {% endfor %}
+            <button type="button" class="close justify-content-center" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </ul>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}
 {% endblock %}
+
+{% block extend_js %}
+    <script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}  

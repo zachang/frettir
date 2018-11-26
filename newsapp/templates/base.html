@@ -1,122 +1,151 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Frettir</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {% block base_css %}
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel='stylesheet'>
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-            <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        {% endblock %}
 
-        {% block extend_base_css %}
-            {# override this block to add app/feature-specific css in extending templates #}
-        {% endblock %}   
-    </head>
+<head>
+    <title>Frettir</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block base_css %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
 
-    <body>
-        {% block header %}
-            <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md navbar-dark header-nav">
-                <div class="container-fluid">
-                    <div class="dropdown">
-                        <i class="fas fa-bars d-lg-none" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Home</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Lastest</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Politics</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Fashion</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Events</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Money</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Tech</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cars</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Travel</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Religion</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Sports</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">People & Culture</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Food & Drinks</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Music</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Health</a>    
-                        </div>
-                    </div>
-                    <a class="navbar-brand mr-0 ml-sm-5" href="#">Frettir</a>
-                    <div class="collapse navbar-collapse navbar-right-items justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'auth:login' %}">Login<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'auth:register' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+    {% block extend_base_css %}
+    {# override this block to add app/feature-specific css in extending templates #}
+    {% endblock %}
+</head>
+
+<body>
+    {% block header %}
+    <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md navbar-dark header-nav">
+        <div class="container-fluid">
+            <div class="dropdown">
+                <i class="fas fa-bars d-lg-none" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Lastest</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Politics</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Fashion</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Events</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Money</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Tech</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Cars</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Travel</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Religion</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">People & Culture</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Food & Drinks</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Music</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Health</a>
                 </div>
-            </nav>
-
-            {% block header-link %}
-                <nav class="nav header-link-nav">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Lastest</a>
-                    <a class="nav-link" href="#">Politics</a>
-                    <a class="nav-link" href="#">Fashion</a>
-                    <a class="nav-link" href="#">Events</a>
-                    <a class="nav-link" href="#">Money</a>
-                    <a class="nav-link" href="#">Tech</a>
-                    <a class="nav-link" href="#">Cars</a>
-                    <a class="nav-link" href="#">Travel</a>
-                    <a class="nav-link" href="#">Religion</a>
-                    <a class="nav-link" href="#">Sports</a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle dropright" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">People & Culture</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Food & Drinks</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Music</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Health</a>
-                        </div>
-                    </li>
-                </nav>
-            {% endblock %}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
-
-       {% block footer %}
-            <div class="container-fluid align-items-center main-footer">
-                &copy; 2018 frettir
             </div>
-        {% endblock %}
+            <a class="navbar-brand mr-0 ml-sm-5" href="#">Frettir</a>
+            <div class="collapse navbar-collapse navbar-right-items justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        {% if user.is_authenticated %}
+                        <a class="nav-link" href="{% url 'auth:login' %}">
+                            {{ user.username }}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        {% else %}
+                        <a class="nav-link" href="{% url 'auth:login' %}">
+                            Login
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                            {% if user.is_authenticated %}
+                            <a class="nav-link" href="{% url 'auth:login' %}">
+                                Logout
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            {% else %}
+                            <a class="nav-link" href="{% url 'auth:register' %}">
+                                Register
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block header-link %}
+    <nav class="nav header-link-nav">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Lastest</a>
+        <a class="nav-link" href="#">Politics</a>
+        <a class="nav-link" href="#">Fashion</a>
+        <a class="nav-link" href="#">Events</a>
+        <a class="nav-link" href="#">Money</a>
+        <a class="nav-link" href="#">Tech</a>
+        <a class="nav-link" href="#">Cars</a>
+        <a class="nav-link" href="#">Travel</a>
+        <a class="nav-link" href="#">Religion</a>
+        <a class="nav-link" href="#">Sports</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle dropright" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">More</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">People & Culture</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Food & Drinks</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Music</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Health</a>
+            </div>
+        </li>
+    </nav>
+    {% endblock %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    <div class="container-fluid align-items-center main-footer">
+        &copy; 2018 frettir
+    </div>
+    {% endblock %}
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        {% block extend_js %}
-            {# override this block to add app/feature-specific js in extending templates #}
-        {% endblock %}  
-    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    {% block extend_js %}
+    {# override this block to add app/feature-specific js in extending templates #}
+    {% endblock %}
+</body>
+
 </html>

@@ -36,7 +36,18 @@ class RegistertView(FormView):
 class LoginView(FormView):
     template_name = 'login.html'
     form_class = LoginForm
-    success_url = 'news/home.html'
+    
+    def form_valid(self, form):
+        username = self.request.POST.get('username')
+        password = self.request.POST.get('password')
+        auth_user = authenticate(username=username, password=password)
+
+        if auth_user:
+            login(self.request, auth_user)
+            return redirect('/')
+        messages.error(self.request, 'The username or password is incorrect')
+        return HttpResponseRedirect(reverse('auth:login'))
+        
 
 class PasswordResetView(FormView):
     template_name = 'password_reset.html'

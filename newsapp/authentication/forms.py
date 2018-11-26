@@ -34,8 +34,8 @@ class RegisterForm(forms.Form):
 
 @parsleyfy
 class LoginForm(forms.Form):
-    email = forms.EmailField(label='', min_length=2, max_length=200, required=True,
-        widget=forms.EmailInput(attrs={'placeholder': 'Email'})
+    username = forms.CharField(label='', min_length=2, max_length=200, required=True,
+        widget=forms.TextInput(attrs={'placeholder': 'Username'})
     )
     password = forms.CharField(label='', min_length=2, max_length=100, required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Password'})
